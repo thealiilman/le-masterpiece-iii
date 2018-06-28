@@ -1,0 +1,64 @@
+*, ::before, ::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-colour: #E84118;
+  --secondary-colour: #333;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, button {
+  font-family: 'Raleway';
+}
+
+/* Styling's Classes */
+// Flex
+.d-flex {
+  display: flex;
+}
+
+/* Element's Classes */
+.parallax {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  background: center fixed url('../../images/parallax-bg.jpg');
+  background-size: cover;
+}
+
+.landing-container {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(232, 65, 24, .75);
+
+  .name-desc-container {
+    width: 120vw;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 246, 250, .9);
+    transform: rotate(350deg);
+
+    h1 {
+      font-weight: 700;
+      font-style: italic;
+      color: var(--primary-colour);
+      border-bottom: 4px solid var(--primary-colour);
+    }
+    
+    p {
+      margin-top: 4px;
+      font-family: 'Pacifico', 'Raleway', Roboto;
+      color: var(--secondary-colour);
+    }
+  }
+}
