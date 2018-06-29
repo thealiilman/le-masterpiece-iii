@@ -5,11 +5,17 @@
 
 :root {
   --primary-colour: #E84118;
+  --primary-colour-rgba: rgba(232, 65, 24, .75);
   --secondary-colour: #333;
+  --tertiary-colour: #F5F6FA;
+  --tertiary-colour-rgba: rgba(245, 246, 250, .95);
+  --white-colour: white;
 }
 
 body {
   overflow-x: hidden;
+  width: 100%;
+  height: 3000px;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, button {
@@ -23,6 +29,114 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 }
 
 /* Element's Classes */
+// Nav
+.nav-container {
+  width: inherit;
+  position: fixed;
+  transition: background-color .25s ease-in-out;
+  z-index: 1000;
+  font-size: 32px;
+
+  a {
+    font-family: 'Pacifico', Roboto, sans-serif;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  span {
+    font-family: 'Pacifico', Roboto, sans-serif;
+    color: var(--white-colour);
+    transition: color .25s ease-in-out;
+  }
+
+  .initial-menu-container {
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .menu {
+    flex-direction: column;
+    margin-left: auto;
+    cursor: pointer;
+  
+    .menu-line {
+      height: 4px;
+      width: 32px;
+      background-color: var(--tertiary-colour);
+      transition: background-color .25s;
+  
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  
+    &:hover {
+      .menu-line {
+        background-color: var(--secondary-colour);
+      } 
+    }
+  }
+  
+  .nav-links-container {
+    display: flex;
+    transition: top .25s;
+  
+    a {
+      font-family: 'Raleway', Roboto, sans-serif;
+      font-weight: 700;
+      color: var(--white-colour);
+      transition: color .25s ease-in-out;
+      text-decoration: none;
+    }
+  }
+
+  // .nav-container's data attributes' styling
+  &[data-position=below-zero] {
+    background-color: var(--tertiary-colour);
+    box-shadow: 0 2px 4px rgba(51, 51, 51, 0.33);
+
+    span {
+      color: var(--primary-colour);
+    }
+
+    .menu-line {
+      background-color: var(--primary-colour);
+    }
+
+    .nav-links-container {
+      a {
+        color: var(--secondary-colour);
+      }
+    }
+  }
+
+  &[data-menu-opened=yes] {
+    background-color: var(--tertiary-colour);
+
+    span {
+      color: var(--primary-colour);
+    }
+
+    .menu-line {
+      background-color: var(--primary-colour);
+    }
+
+    .nav-links-container {
+      display: flex;
+      top: 88px;
+      box-shadow: 0 2px 4px rgba(51, 51, 51, 0.33);
+      
+      a {
+        color: var(--secondary-colour);
+        &:hover {
+          color: var(--primary-colour);
+        }
+      }
+    }
+  }
+}
+
+// Parallax & Landing
 .parallax {
   height: 100%;
   width: 100%;
@@ -37,15 +151,15 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(232, 65, 24, .75);
+  background-color: var(--primary-colour-rgba);
 
   .name-desc-container {
-    width: 120vw;
+    width: 120%;
     position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(245, 246, 250, .9);
+    background-color: var(--tertiary-colour);
     transform: rotate(350deg);
 
     h1 {
@@ -57,7 +171,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     
     p {
       margin-top: 4px;
-      font-family: 'Pacifico', 'Raleway', Roboto;
+      font-family: 'Pacifico', 'Raleway', Roboto, sans-serif;
       color: var(--secondary-colour);
     }
   }
