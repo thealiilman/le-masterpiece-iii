@@ -15,7 +15,6 @@
 body {
   overflow-x: hidden;
   width: 100%;
-  height: 2000px;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, button {
@@ -63,17 +62,11 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
       height: 4px;
       width: 32px;
       background-color: var(--tertiary-colour);
-      transition: background-color .25s, margin 1s, tramsform 1s;
+      transition: background-color .25s, margin .25s, transform .5s ease-in-out;
   
       &:not(:last-child) {
         margin-bottom: 12px;
       }
-    }
-  
-    &:hover {
-      .menu-line {
-        background-color: var(--secondary-colour);
-      } 
     }
   }
   
