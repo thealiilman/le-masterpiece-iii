@@ -71,7 +71,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
   }
   
   .nav-links-container {
-    display: flex;
     transition: height .25s;
   
     a {
@@ -129,7 +128,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     }
 
     .nav-links-container {
-      display: flex;
       height: 207px;
 
       a {
@@ -167,6 +165,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     align-items: center;
     background-color: var(--tertiary-colour);
     transform: rotate(350deg);
+    padding: 32px;
 
     h1 {
       font-weight: 700;
@@ -179,6 +178,57 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
       margin-top: 4px;
       font-family: 'Pacifico', 'Raleway', Roboto, sans-serif;
       color: var(--secondary-colour);
+    }
+  }
+}
+
+// About
+.about-container {
+  flex-direction: column;
+  background-color: var(--tertiary-colour-rgba);
+
+  h1, h2 {
+    font-family: 'Pacifico', 'Raleway', Roboto, sans-serif;
+    color: var(--secondary-colour);
+  }
+
+  p {
+    font-family: 'Raleway', Roboto, sans-serif;
+    color: var(--secondary-colour);
+  }
+
+  span, a {
+    font-weight: 700;
+    color: var(--primary-colour);
+    border-bottom: 0px solid var(--secondary-colour);
+    transition: border-bottom .2s ease-in-out;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid var(--secondary-colour);
+    }
+  }
+
+  .about-technologies {
+    flex-direction: column;
+    margin: 32px 0;
+
+    h2 {
+      text-align: center;
+    }
+
+    .about-devicons {
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    i {
+      font-size: 64px;
+      padding: 12px;
     }
   }
 }

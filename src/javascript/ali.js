@@ -1,6 +1,9 @@
 const nav = document.querySelector('.nav-container');
 const menu = document.querySelector('.menu');
 const navLinksContainer = document.querySelector('.nav-links-container');
+const navLinks = document.querySelectorAll('.nav-links-container')
+
+const aboutContainer = document.querySelector('.about-container');
 let isBodyBelowZero;
 
 // Helpers
@@ -8,6 +11,13 @@ const toggleAttribute = (elem, attr, one, two) => {
   const elemDataAttribute = elem.getAttribute(attr);
   elem.setAttribute(attr, elemDataAttribute === one ? two : one);
 };
+
+const scrollTo = elem => {
+  window.scroll({
+    behavior: 'smooth',
+    top: elem.offsetTop - 88,
+  });
+}
 
 // Events
 window.addEventListener('scroll', () => {
@@ -32,4 +42,8 @@ menu.addEventListener('click', () => {
 
 navLinksContainer.addEventListener('click', () => {
   nav.setAttribute('data-menu-opened', 'no');
+});
+
+document.getElementById("about").addEventListener('click', () => {
+  scrollTo(aboutContainer);
 });
