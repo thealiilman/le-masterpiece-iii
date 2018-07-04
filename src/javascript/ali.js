@@ -3,7 +3,12 @@ const menu = document.querySelector('.menu');
 const navLinksContainer = document.querySelector('.nav-links-container');
 const navLinks = document.querySelectorAll('.nav-links-container')
 
+const aboutLink = document.getElementById('about');
+const portfolioLink = document.getElementById('portfolio');
+
 const aboutContainer = document.querySelector('.about-container');
+const portfolioContainer = document.querySelector('.portfolio-container');
+
 let isBodyBelowZero;
 
 // Helpers
@@ -44,6 +49,12 @@ navLinksContainer.addEventListener('click', () => {
   nav.setAttribute('data-menu-opened', 'no');
 });
 
-document.getElementById("about").addEventListener('click', () => {
+aboutLink.addEventListener('click', e => {
+  e.preventDefault();
   scrollTo(aboutContainer);
+});
+
+portfolioLink.addEventListener('click', e => {
+  e.preventDefault();
+  scrollTo(portfolioContainer);
 });

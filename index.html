@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Ali Ilman</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,700,700i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Berkshire+Swash|Raleway:400,700,700i">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="src/stylesheets/css/ali.css">
 </head>
 <body>
@@ -22,8 +25,8 @@
     </div>
 
     <div class="nav-links-container d-flex">
-      <a id="about">About</a>
-      <a>Portfolio</a>
+      <a id="about" href="#">About</a>
+      <a id="portfolio" href="#">Portfolio</a>
       <a>Contact</a>
     </div>
   </nav>
@@ -37,7 +40,7 @@
   </div>
 
   <div class="about-container d-flex container-padding">
-    <h1>About</h1>
+    <h1 class="container-header">About</h1>
     <p>
       Hello, I am <span>Ali Ilman</span>,
       a 17-year-old full-stack developer from <span>Malaysia</span>.
@@ -53,18 +56,11 @@
         <i class="devicon-css3-plain-wordmark colored"></i>
         <i class="devicon-sass-original colored"></i>
         <i class="devicon-bootstrap-plain colored"></i>
-      </div>
-      <div class="about-devicons d-flex">
         <i class="devicon-javascript-plain colored"></i>
         <i class="devicon-react-original colored"></i>
         <i class="devicon-jquery-plain colored"></i>
-      </div>
-      <div class="about-devicons d-flex">
         <i class="devicon-ruby-plain colored"></i>
         <i class="devicon-rails-plain colored"></i>
-        <i class="devicon-mysql-plain colored"></i>
-      </div>
-      <div class="about-devicons d-flex">
         <i class="devicon-git-plain colored"></i>
         <i class="devicon-heroku-original colored"></i>
         <i class="devicon-amazonwebservices-original colored"></i>
@@ -76,6 +72,89 @@
       I am interested in technology, football and fitness,
       and I love landscapes!
     </p>
+  </div>
+
+  <div class="portfolio-container d-flex container-padding">
+    <h1 class="container-header">Portfolio</h1>
+
+    <div class="portfolio-card d-flex">
+      <img src="src/images/portfolio-v3.png" alt="Portfolio v3">
+      <div class="portfolio-name-links d-flex">
+        <h3>Portfolio v3</h3>
+        <div class="portfolio-links d-flex">
+          <a href="/" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="https://github.com/thealiilman/lemasterpiece-3.0" target="_blank">
+            <i class="devicon-github-plain colored"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-card d-flex">
+      <img src="src/images/random-quote-generator.svg" alt="Random Quote Generator">
+      <div class="portfolio-name-links d-flex">
+        <h3>Random Quote Generator</h3>
+        <div class="portfolio-links d-flex">
+          <a href="/projects/random-quote-generator" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="https://github.com/thealiilman/random-quote-generator" target="_blank">
+            <i class="devicon-github-plain colored"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card d-flex">
+      <img src="src/images/takemethroughgreatermanchester.png" alt="Take Me Through Greater Manchester">
+      <div class="portfolio-name-links d-flex">
+        <h3>Take Me Through<br>Greater Manchester</h3>
+        <div class="portfolio-links d-flex">
+          <a href="/projects/takemethroughgreatermanchester" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="https://github.com/thealiilman/TakeMeThroughGreaterManchester" target="_blank">
+            <i class="devicon-github-plain colored"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card d-flex">
+      <img src="src/images/portfolio-v2.png" alt="Portfolio v2">
+      <div class="portfolio-name-links d-flex">
+        <h3>Portfolio v2</h3>
+        <div class="portfolio-links d-flex">
+          <a href="/projects/portfolio-v2" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="https://github.com/thealiilman/lemasterpiece-2.0" target="_blank">
+            <i class="devicon-github-plain colored"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-card d-flex">
+      <img src="src/images/tlp.png" alt="ThatLad Photography">
+      <div class="portfolio-name-links d-flex">
+        <h3>ThatLad Photography</h3>
+        <div class="portfolio-links d-flex">
+          <a href="/projects/thatladphotography" target="_blank">
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="https://github.com/thealiilman/thatladphotography-v2" target="_blank">
+            <i class="devicon-github-plain colored"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-container d-flex container-padding">
+    <h1 class="container-header">Contact</h1>
   </div>
 
   <script src="src/javascript/ali.js"></script>
