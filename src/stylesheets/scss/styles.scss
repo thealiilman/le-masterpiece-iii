@@ -8,7 +8,8 @@
   --primary-colour-rgba: rgba(232, 65, 24, .75);
   --secondary-colour: #333;
   --tertiary-colour: #F5F6FA;
-  --tertiary-colour-rgba: rgba(245, 246, 250, .95);
+  --tertiary-colour-rgba95: rgba(245, 246, 250, .95);
+  --tertiary-colour-rgba90: rgba(245, 246, 250, .9);
   --white-colour: white;
 }
 
@@ -18,13 +19,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, button {
-  font-family: 'Raleway';
+  font-family: 'Raleway', Roboto, sans-serif;
 }
 
 /* Styling's Classes */
 // Flex
 .d-flex {
   display: flex;
+}
+
+// Custom
+.container-header {
+  flex: 1 1 100%;
+  font-family: 'Pacifico', Roboto, sans-serif;
+  color: var(--secondary-colour);
 }
 
 /* Element's Classes */
@@ -44,7 +52,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 
   span {
     font-family: 'Pacifico', Roboto, sans-serif;
-    color: var(--white-colour);
+    color: var(--tertiary-colour);
     transition: color .25s ease-in-out;
   }
 
@@ -76,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     a {
       font-family: 'Raleway', Roboto, sans-serif;
       font-weight: 700;
-      color: var(--white-colour);
+      color: var(--tertiary-colour);
       transition: color .25s ease-in-out;
       text-decoration: none;
     }
@@ -132,9 +140,6 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 
       a {
         color: var(--secondary-colour);
-        &:hover {
-          color: var(--primary-colour);
-        }
       }
     }
   }
@@ -176,7 +181,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     
     p {
       margin-top: 4px;
-      font-family: 'Pacifico', 'Raleway', Roboto, sans-serif;
+      font-family: 'Pacifico', Roboto, sans-serif;
       color: var(--secondary-colour);
     }
   }
@@ -185,15 +190,14 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 // About
 .about-container {
   flex-direction: column;
-  background-color: var(--tertiary-colour-rgba);
+  background-color: var(--tertiary-colour);
 
-  h1, h2 {
-    font-family: 'Pacifico', 'Raleway', Roboto, sans-serif;
+  h2 {
+    font-family: 'Pacifico', Roboto, sans-serif;
     color: var(--secondary-colour);
   }
 
   p {
-    font-family: 'Raleway', Roboto, sans-serif;
     color: var(--secondary-colour);
   }
 
@@ -231,4 +235,62 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
       padding: 12px;
     }
   }
+}
+
+// Portfolio
+.portfolio-container {
+  flex-wrap: wrap;
+  background-color: var(--tertiary-colour-rgba95);
+
+  h1 {
+    font-family: 'Pacifico', Roboto, sans-serif;
+  }
+
+  .portfolio-card {
+    height: 480px;
+    flex-direction: column;
+    margin-top: 2%;
+    background-color: var(--tertiary-colour);
+    box-shadow: 0 2px 4px rgba(51, 51, 51, 0.33);
+
+    img {
+      height: 75%;
+      width: 100%;
+    }
+
+    .portfolio-name-links {
+      height: 25%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 16px;
+
+      h3 {
+        font-family: 'Raleway', Roboto, sans-serif;
+        color: var(--primary-colour);
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+
+        &:first-of-type {
+          margin-right: 32px;
+        }
+
+        &:last-of-type {
+          margin-left: 32px;
+        }
+
+        i {
+          color: var(--secondary-colour);
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+.contact-container {
+  background-color: var(--tertiary-colour-rgba90);
 }
