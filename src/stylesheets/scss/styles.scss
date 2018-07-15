@@ -7,6 +7,7 @@
   --primary-colour: #E84118;
   --primary-colour-rgba: rgba(232, 65, 24, .75);
   --secondary-colour: #333;
+  --secondary-colour-rgba90: rgba(51, 51, 51, 0.9);
   --tertiary-colour: #F5F6FA;
   --tertiary-colour-rgba95: rgba(245, 246, 250, .95);
   --tertiary-colour-rgba90: rgba(245, 246, 250, .9);
@@ -31,6 +32,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 // Custom
 .container-header {
   flex: 1 1 100%;
+  margin-bottom: 16px;
   font-family: 'Pacifico', Roboto, sans-serif;
   color: var(--secondary-colour);
 }
@@ -85,8 +87,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
       font-family: 'Raleway', Roboto, sans-serif;
       font-weight: 700;
       color: var(--tertiary-colour);
-      transition: color .25s ease-in-out;
       text-decoration: none;
+      cursor: pointer;
+      transition: color .25s ease-in-out;
     }
   }
 
@@ -251,11 +254,13 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     flex-direction: column;
     margin-top: 2%;
     background-color: var(--tertiary-colour);
-    box-shadow: 0 2px 4px rgba(51, 51, 51, 0.33);
+    box-shadow: 0 2px 4px rgba(51, 51, 51, .33);
+    border-radius: 8px;
 
     img {
       height: 75%;
       width: 100%;
+      border-radius: 8px 8px 0 0;
     }
 
     .portfolio-name-links {
@@ -285,6 +290,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
         i {
           color: var(--secondary-colour);
           font-size: 32px;
+          transition: color .25s ease-in-out;
         }
       }
     }
@@ -292,5 +298,104 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
 }
 
 .contact-container {
-  background-color: var(--tertiary-colour-rgba90);
+  flex-direction: column;
+  background-color: var(--secondary-colour-rgba90);
+
+  h1 {
+    color: white;
+  }
+
+  .contact-form {
+    flex-direction: column;
+
+    .contact-form-field {
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      label {
+        font-family: "Raleway", "Roboto", sans-serif;
+        font-weight: 700;
+        color: var(--tertiary-colour);
+        margin-bottom: 8px;
+      }
+      
+      textarea {
+        resize: vertical;
+      }
+
+      input, textarea {
+        font-family: "Raleway", "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 8px;
+        background-color: var(--tertiary-colour);
+      }
+    }
+
+    button {
+      align-self: center;
+      padding: 0 16px;
+      font-family: "Pacifico", "Roboto", sans-serif;
+      font-size: 24px;
+      color: var(--primary-colour);
+      border-radius: 8px;
+      border: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .25s ease-in-out, background-color .25s ease-in-out;
+    }
+
+    .form-message {
+      margin-top: 32px;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+
+      &[data-message=error] {
+        color: var(--primary-colour);
+      }
+
+      &[data-message=success] {
+        color: var(--white-colour);
+      }
+    }
+  }
+}
+
+.contact-media {
+  flex: 1 1 30%;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+
+    i {
+      font-size: 32px;
+    }
+  }
+}
+
+footer {
+  justify-content: center;
+  padding: 16px;
+  background-color: var(--secondary-colour-rgba90);
+  
+  a {
+    text-decoration: none;
+    margin-right: 32px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    i {
+      font-size: 32px;
+      color: var(--white-colour);
+      transition: color .25s ease-in-out;
+    }
+  }
 }
