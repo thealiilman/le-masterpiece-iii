@@ -6,9 +6,7 @@
   <title>Ali Ilman</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Berkshire+Swash|Raleway:400,700,700i">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="src/stylesheets/css/ali.css">
   <link rel="stylesheet" type="text/css" href="src/stylesheets/css/ali.css">
 </head>
 <body>
@@ -25,16 +23,15 @@
     </div>
 
     <div class="nav-links-container d-flex">
-      <a id="about" href="#">About</a>
-      <a id="portfolio" href="#">Portfolio</a>
-      <a>Contact</a>
+      <a id="about">About</a>
+      <a id="portfolio">Portfolio</a>
+      <a id="contact">Contact</a>
     </div>
   </nav>
 
   <div class="landing-container d-flex">
     <div class="name-desc-container d-flex">
       <h1>Ali Ilman</h1>
-      <hr>
       <p>Full-Stack Developer</p>
     </div>
   </div>
@@ -70,7 +67,7 @@
     <p>
       I am a lad with an all-round music taste, Oasis are my favourite band.
       I am interested in technology, football and fitness,
-      and I love landscapes!
+      and I love to read books and stare at beautiful landscapes!
     </p>
   </div>
 
@@ -83,10 +80,10 @@
         <h3>Portfolio v3</h3>
         <div class="portfolio-links d-flex">
           <a href="/" target="_blank">
-            <i class="fas fa-link"></i>
+            <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="https://github.com/thealiilman/lemasterpiece-3.0" target="_blank">
-            <i class="devicon-github-plain colored"></i>
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
@@ -98,10 +95,10 @@
         <h3>Random Quote Generator</h3>
         <div class="portfolio-links d-flex">
           <a href="/projects/random-quote-generator" target="_blank">
-            <i class="fas fa-link"></i>
+            <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="https://github.com/thealiilman/random-quote-generator" target="_blank">
-            <i class="devicon-github-plain colored"></i>
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
@@ -110,13 +107,13 @@
     <div class="portfolio-card d-flex">
       <img src="src/images/takemethroughgreatermanchester.png" alt="Take Me Through Greater Manchester">
       <div class="portfolio-name-links d-flex">
-        <h3>Take Me Through<br>Greater Manchester</h3>
+        <h3>Take Me Through Greater Manchester</h3>
         <div class="portfolio-links d-flex">
           <a href="/projects/takemethroughgreatermanchester" target="_blank">
-            <i class="fas fa-link"></i>
+            <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="https://github.com/thealiilman/TakeMeThroughGreaterManchester" target="_blank">
-            <i class="devicon-github-plain colored"></i>
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
@@ -128,10 +125,10 @@
         <h3>Portfolio v2</h3>
         <div class="portfolio-links d-flex">
           <a href="/projects/portfolio-v2" target="_blank">
-            <i class="fas fa-link"></i>
+            <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="https://github.com/thealiilman/lemasterpiece-2.0" target="_blank">
-            <i class="devicon-github-plain colored"></i>
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
@@ -143,10 +140,10 @@
         <h3>ThatLad Photography</h3>
         <div class="portfolio-links d-flex">
           <a href="/projects/thatladphotography" target="_blank">
-            <i class="fas fa-link"></i>
+            <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="https://github.com/thealiilman/thatladphotography-v2" target="_blank">
-            <i class="devicon-github-plain colored"></i>
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
@@ -155,7 +152,47 @@
 
   <div class="contact-container d-flex container-padding">
     <h1 class="container-header">Contact</h1>
+
+    <form action="form.php" method="POST" class="contact-form d-flex" id="contactForm">
+      <div class="contact-form-field d-flex">
+        <label>Name</label>
+        <input id="formName" type="text" placeholder="Ali Ilman" name="name">
+      </div>
+      
+      <div class="contact-form-field d-flex">
+        <label>Email</label>
+        <input id="formEmail" type="text" placeholder="ali@ali-ilman.com" name="email">
+      </div>
+
+      <div class="contact-form-field d-flex">
+        <label>Subject</label>
+        <input id="formSubject" type="text" name="subject">
+      </div>
+      
+      <div class="contact-form-field d-flex">
+        <label>Message</label>
+        <textarea id="formMessage" rows="3" name="message"></textarea>
+      </div>
+
+      <button type="submit" id="formButton">Send</button>
+
+      <p class="form-message"></p>
+    </form>
   </div>
+
+  <footer class="d-flex">
+    <a href="https://twitter.com/thealiilman" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://github.com/thealiilman" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/aliilman/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </footer>
 
   <script src="src/javascript/ali.js"></script>
 </body>
