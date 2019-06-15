@@ -74,7 +74,7 @@ sendButton.addEventListener('click', e => {
   } else {
     formMessage.textContent = "";
 
-    const url = 'http://ali-ilman.com/form.php';
+    const url = 'https://ali-ilman.com/form.php';
     const options = {
       method: "POST",
       body: new FormData(document.getElementById("contactForm"))
